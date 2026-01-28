@@ -1,4 +1,3 @@
-
 const { verifyJwt } = require('../../../config/jwt_token');
 
 module.exports = (req, res, next) => {
@@ -8,7 +7,8 @@ module.exports = (req, res, next) => {
       return res.status(401).json({ message: 'No token provided' });
     }
 
-    const token = authHeader;
+    const token = authHeader;  // Get the token after "Bearer "
+    
     const decoded = verifyJwt(token);
 
     req.user = decoded;
