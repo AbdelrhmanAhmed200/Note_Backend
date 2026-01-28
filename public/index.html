@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Backend - Vercel Speed Insights Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+        
+        .info-section {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        
+        .info-section h2 {
+            color: #667eea;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        
+        .info-section p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        
+        .api-endpoints {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+        
+        .api-endpoints h3 {
+            color: #333;
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+        
+        .endpoint {
+            background: #f5f5f5;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: #4caf50;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            margin-left: 10px;
+        }
+        
+        .note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 4px;
+        }
+        
+        .note strong {
+            color: #856404;
+        }
+        
+        .note p {
+            color: #856404;
+            margin-top: 5px;
+            line-height: 1.5;
+        }
+        
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📝 Note Backend API</h1>
+        <p class="subtitle">Express.js Backend with Vercel Speed Insights <span class="badge">Enabled</span></p>
+        
+        <div class="info-section">
+            <h2>🚀 Speed Insights Status</h2>
+            <p>Vercel Speed Insights is now integrated with this application. Performance metrics will be tracked when deployed to Vercel.</p>
+            <p>The Speed Insights script is loaded at the bottom of this page and will automatically track Core Web Vitals and other performance metrics.</p>
+        </div>
+        
+        <div class="api-endpoints">
+            <h3>📡 Available API Endpoints:</h3>
+            <div class="endpoint">GET /</div>
+            <div class="endpoint">POST /note/* (Authentication endpoints)</div>
+            <div class="endpoint">GET /note/* (Note management endpoints)</div>
+        </div>
+        
+        <div class="note">
+            <strong>💡 Note:</strong>
+            <p>This is a backend API with Speed Insights enabled. To view Speed Insights data:</p>
+            <ol style="margin-left: 20px; margin-top: 10px; color: #856404;">
+                <li>Deploy this app to Vercel</li>
+                <li>Enable Speed Insights in your Vercel project dashboard</li>
+                <li>Visit your deployed site to generate metrics</li>
+                <li>View the data in the Speed Insights tab</li>
+            </ol>
+        </div>
+        
+        <div class="info-section" style="margin-top: 20px;">
+            <h2>📚 Documentation</h2>
+            <p>For more information about Speed Insights, visit: <a href="https://vercel.com/docs/speed-insights" target="_blank">Vercel Speed Insights Docs</a></p>
+        </div>
+    </div>
+    
+    <!-- Vercel Speed Insights Script -->
+    <script>
+        window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+</body>
+</html>
